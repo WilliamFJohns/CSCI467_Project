@@ -9,7 +9,7 @@ import numpy as np
 
 # Reads data from csv file
 label_encoder = LabelEncoder()
-data = pd.read_csv('./archive/market_analysis_2019.csv', delimiter=';')
+data = pd.read_csv('data/market_analysis_2019.csv', delimiter=';')
 
 data['month'] = pd.to_datetime(data['month'], format='%Y-%m')
 data['revenue'] = data['revenue'].str.replace(',', '.').astype(float)
